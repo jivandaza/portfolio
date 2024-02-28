@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description" 
+        content="Este es mi portafolio, donde comparto y presento mis proyectos, habilidades y experiencias. Aquí encontrarás una variedad de trabajos que abarcan desde desarrollo web hasta proyectos personales y colaborativos."
+    >
+
+    <title>Mi Portafolio | Jivandaza | Desarrollador Web</title>
+
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/favicon.ico">
+    <meta name="theme-color" content="#fff">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media-queries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Jivandaza</div>
+        <div class="nav-links">
+            <li><a href="#acerca-de-mi">Acerca de Mí</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Jivandaza</div>
+        <div class="hamburger-menu">
+            <div 
+                class="hamburger-icon"
+                onclick="toggleMenu()"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#acerca-de-mi" onclick="toggleMenu()">Acerca de Mí</a></li>
+                <li><a href="#experiencia" onclick="toggleMenu()">Experiencia</a></li>
+                <li><a href="#proyectos" onclick="toggleMenu()">Proyectos</a></li>
+                <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+            </div>
+        </div>
+    </nav>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

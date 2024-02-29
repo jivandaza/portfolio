@@ -20,7 +20,7 @@
     <nav id="desktop-nav">
         <div class="logo">Jivandaza</div>
         <div class="nav-links">
-            <li><a href="#acerca-de-mi">Acerca de Mí</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
             <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -38,13 +38,50 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#acerca-de-mi" onclick="toggleMenu()">Acerca de Mí</a></li>
+                <li><a href="#sobre-mi" onclick="toggleMenu()">Sobre Mí</a></li>
                 <li><a href="#experiencia" onclick="toggleMenu()">Experiencia</a></li>
                 <li><a href="#proyectos" onclick="toggleMenu()">Proyectos</a></li>
                 <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
             </div>
         </div>
     </nav>
+    <section id="profile">
+        <div class="section-picture">
+            <img src="./assets/foto-perfil.png" alt="Foto de perfil de Jivandaza" />
+        </div>
+        <div class="section-text">
+            <p class="section-text-greeting">Hola, soy</p>
+            <h1 class="title">Jossid Daza</h1>
+            <p class="section-text-position">Desarrollador FullStack</p>
+            <div class="btn-container">
+                <button
+                    class="btn btn-curriculum"
+                    onclick="window.open('./assets/curriculum-vitae.pdf')"
+                >
+                    Descargar CV
+                </button>
+                <button 
+                    class="btn btn-contact" onclick="location.href='./#contacto'"
+                >
+                    Contactame
+                </button>
+            </div>
+            <div id="socials-container">
+                <img
+                    src="./assets/linkedin.png"
+                    alt="Mi perfil de LinkedIn"
+                    class="icon"
+                    onclick="location.href='http://linkedin.com/in/jossid-ivan-daza-lobo-7544b711a/'"
+                />
+                <img
+                    src="./assets/github.png"
+                    alt="M perfil de Github"
+                    class="icon"
+                    onclick="location.href='https://github.com/jivandaza'"
+                />
+            </div>
+        </div>
+    </section>    
     <script src="./scripts/main.js"></script>
 </body>
 </html>

@@ -11,6 +11,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.active {
+  background: black;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,7 +43,12 @@ nav {
   height: 17vh;
 }
 
+nav.active {
+  background: black;
+}
+
 .nav-links {
+  background: inherit;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -49,6 +58,10 @@ a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
+}
+
+a.active {
+  color: white;
 }
 
 a:hover {
@@ -62,8 +75,39 @@ a:hover {
   font-size: 2rem;
 }
 
+.logo.active {
+  color: white;
+}
+
 .logo:hover {
   cursor: default;
+}
+
+.btn-theme {
+    border: 0;
+    background: transparent;
+}
+
+.btn-theme i {
+    font-size: 2rem;
+}
+
+.btn-theme i:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.btn-theme.dark.active {
+    display: none;
+}
+
+.btn-theme.white {
+    display: none;
+}
+
+.btn-theme.white.active {
+    color: white;
+    display: block;
 }
 
 /* ***   HAMBURGER NAV   *** */
@@ -87,10 +131,14 @@ a:hover {
 }
 
 .hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.hamburger-icon span.active {
+    background-color: white;
 }
 
 .hamburger-icon:hover span {
@@ -98,44 +146,58 @@ a:hover {
 }
 
 .menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
 }
 
 .menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  text-decoration-color: white;
-  transition: all 0.3 ease-in-out;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a.active {
+    background-color: black;
+    color: white;
 }
 
 .menu-links a:hover {
-  color: gray;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
 }
 
 .menu-links li {
-  list-style: none;
+    text-align: center;
+    list-style: none;
+}
+
+.menu-links li.active:last-child {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6px;
+    background: rgb(0, 0, 0);
+    text-align: center;
 }
 
 .menu-links.open {
-  max-height: 300px;
+    max-height: 300px;
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translate(10px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -168,6 +230,10 @@ section {
   min-height: fit-content;
 }
 
+section.active {
+  background-color: black;
+}
+
 .section-container {
   display: flex;
 }
@@ -197,7 +263,7 @@ section {
   font-weight: 600;
 }
 
-.section-text-greeting {
+.section-text-p1 {
   text-align: center;
 }
 
@@ -209,6 +275,10 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+}
+
+.title.active {
+  color: white;
 }
 
 #socials-container {
@@ -225,8 +295,16 @@ section {
   height: 2rem;
 }
 
+.icon i {
+  font-size: 2rem;
+}
+
+.icon i.active {
+  color: white;
+}
+
 .icon:hover {
-    opacity: .7;
+  opacity: 0.7;
 }
 
 /* ***   BUTTONS   *** */
@@ -265,6 +343,11 @@ section {
   background: rgb(0, 0, 0);
 }
 
+.btn-curriculum.active:hover {
+  background: white;
+  color: black;
+}
+
 .btn-contact {
   background: none;
 }
@@ -273,6 +356,103 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
+.btn-contact.active {
+  color: white;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
 .btn-container {
   gap: 1rem;
+}
+
+/* ***   ABOUT SECTION   *** */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section-pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* ***   EXPERIENCE SECTION   *** */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
 }
